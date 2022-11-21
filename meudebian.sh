@@ -80,7 +80,7 @@ if [ $executa -eq 1 ]
 then
     doSeparador "Adicionando repositorios..."
     # ---- apps basicos para os repos
-    apt install curl ca-certificates gnupg lsb-release
+    apt install -y curl ca-certificates gnupg lsb-release
 
     # ---- adicionando contrib e non-free
     sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
