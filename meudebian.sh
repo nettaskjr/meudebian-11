@@ -365,7 +365,8 @@ fi
 # [ ] atualiza automaticamente
 if [ $executa -eq 1 ] 
 then
-    prg="rpi_imager"
+    vs="1.7.3"
+    prg="imager_${vs}_amd64.deb"
     end="https://downloads.raspberrypi.org/imager"
     arq="imager_amd64.deb"
     # ----
