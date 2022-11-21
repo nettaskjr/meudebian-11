@@ -148,7 +148,7 @@ apps="$apps gufw"                                                   #interface p
 apps="$apps openconnect"                                            #cliente vpn
 
 # ---- dev  
-apps="$apps openjdk-11-jdk"                                         #jdk
+apps="$apps openjdk-17-jdk"                                         #jdk
 apps="$apps git"                                                    #repositorio
 apps="$apps dialog"                                                 #criacao de telas na linha de comando
 apps="$apps shellcheck"                                             #verifica bugs em scripts shell
@@ -224,7 +224,7 @@ apps="$apps lshw"                                                   #mostra info
 #apps="$apps glances"                                               #mostra informações de processos - obsoleto
 
 # ---- virtualização
-apps="$apps virtualbox-6.1"                                         #maquina virtual
+apps="$apps virtualbox-7.0"                                         #maquina virtual
 
 # ---- aws
 apps="$apps s3fs"                                                   #monta particao AWS s3
@@ -295,7 +295,7 @@ fi
 # [x] atualiza automaticamente
 if [ $executa -eq 1 ] 
 then
-    vs="1.3.00.5153_amd64"
+    vs="1.5.00.23861_amd64"
     prg="teams"
     end="https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams"
     arq="${prg}_${vs}.deb"
@@ -333,25 +333,25 @@ then
         doInstalar "$exec" $executa "$prg" "$prg"
 fi
 
-# ---- Slack ---- #
-# [x] atualiza automaticamente
-if [ $executa -eq 1 ] 
-then
-    vs="4.8.0-amd64"
-    prg="slack"
-    end="https://downloads.slack-edge.com/linux_releases"
-    arq="${prg}-desktop-${vs}.deb"
-    # ----
-    wget -c -P "/tmp" "$end/$arq"
-    exec="dpkg -i /tmp/$arq"
-        doInstalar "$exec" $executa "$prg" "$prg"
-fi
+## ---- Slack ---- #
+## [x] atualiza automaticamente
+#if [ $executa -eq 1 ] 
+#then
+#    vs="4.8.0-amd64"
+#    prg="slack"
+#    end="https://downloads.slack-edge.com/linux_releases"
+#    arq="${prg}-desktop-${vs}.deb"
+#    # ----
+#    wget -c -P "/tmp" "$end/$arq"
+#    exec="dpkg -i /tmp/$arq"
+#        doInstalar "$exec" $executa "$prg" "$prg"
+#fi
 
 # ---- DBeaver ---- #
 # [ ] atualiza automaticamente
 if [ $executa -eq 1 ] 
 then
-    vs="7.2.4"
+    vs="22.2.5"
     prg="dbeaver"
     end="https://dbeaver.io/files/${vs}"
     arq="${prg}-ce_${vs}_amd64.deb"
@@ -374,19 +374,19 @@ then
         doInstalar "$exec" $executa "$prg" "$prg"
 fi
 
-# ---- Evernote Client ---- #
-# [ ] atualiza automaticamente
-if [ $executa -eq 1 ] 
-then
-    vs="10.7.6"
-    prg="evernote-client"
-    end="https://cdn1.evernote.com/boron/linux/builds/"
-    arq="Evernote-${vs}-linux-ddl-ga-2321.deb"
-    # ----
-    wget -c -P "/tmp" "$end/$arq"
-    exec="dpkg -i /tmp/$arq"
-        doInstalar "$exec" $executa "$prg" "$prg"
-fi
+## ---- Evernote Client ---- #
+## [ ] atualiza automaticamente
+#if [ $executa -eq 1 ] 
+#then
+#    vs="10.7.6"
+#    prg="evernote-client"
+#    end="https://cdn1.evernote.com/boron/linux/builds/"
+#    arq="Evernote-${vs}-linux-ddl-ga-2321.deb"
+#    # ----
+#    wget -c -P "/tmp" "$end/$arq"
+#    exec="dpkg -i /tmp/$arq"
+#        doInstalar "$exec" $executa "$prg" "$prg"
+#fi
 
 #---------------------------------------EXTRAS---------------------------------#
 
