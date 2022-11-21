@@ -268,18 +268,18 @@ fi
 
 # # ----  Google Chrome  ---- #
 # # [x] atualiza automaticamente
-# if [ $executa -eq 1 ] 
-# then
-#     prg="google-chrome"
-#     end="https://dl.google.com/linux/direct"
-#     a64="google-chrome-stable_current_amd64.deb"
-#     a86="google-chrome-stable_current_i386.deb"
-#     [ "$(doArquitetura64)" -eq "1" ] && arq="$a64" || arq="$a86"
-#     # ----
-#     wget -c -P "/tmp" "$end/$arq"
-#     exec="dpkg -i /tmp/$arq"
-#         doInstalar "$exec" $executa "$prg" "$prg"
-# fi
+if [ $executa -eq 1 ] 
+then
+    prg="google-chrome"
+    end="https://dl.google.com/linux/direct"
+    a64="google-chrome-stable_current_amd64.deb"
+    a86="google-chrome-stable_current_i386.deb"
+    [ "$(doArquitetura64)" -eq "1" ] && arq="$a64" || arq="$a86"
+    # ----
+    wget -c -P "/tmp" "$end/$arq"
+    exec="dpkg -i /tmp/$arq"
+        doInstalar "$exec" $executa "$prg" "$prg"
+fi
 
 # ----  AWS Elastic Beanstalk cliente  ---- #
 # [ ] atualiza automaticamente
