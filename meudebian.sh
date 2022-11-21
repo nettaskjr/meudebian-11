@@ -115,7 +115,7 @@ executa=1
 
 # ---- app base
 apps="build-essential g++ wget"                                     #ferramentas base
-apps="$apps python-apt"                                             #para o steam
+apps="$apps python3-apt"                                            #para o steam
 apps="$apps lolcat"                                                 #cores no shell, utilizado para fetch
 apps="$apps figlet"                                                 #gera escritas via terminal
 apps="$apps cmake"                                                  #compilador em C
@@ -132,8 +132,8 @@ apps="$apps progress"                                               #apresenta p
 # ---- redes                            
 apps="$apps net-tools"                                              #(ifconfig entre outros)
 apps="$apps iproute2 iproute2-doc"                                  #(comandos de rede tb)
-apps="$apps iptraf"                                                 #(verificar trafego de rede)
-apps="$apps nmap zenmap"                                            #(verificacao de status de rede)
+apps="$apps iptraf-ng"                                              #(verificar trafego de rede)
+apps="$apps nmap ndiff"                                             #(verificacao de status de rede)
 apps="$apps whois"                                                  #identificacao de proprietario de dominio"
 apps="$apps filezilla"                                              #cliente ftp
 apps="$apps wireshark"                                              #ferramenta de invasao
@@ -150,14 +150,14 @@ apps="$apps shellcheck"                                             #verifica bu
 apps="$apps composer"                                               #framework backend
 apps="$apps dia"                                                    #editor de fluxogramas, UML, etc...
 apps="$apps recode"                                                 #converte arquivos em diferentes tipos de formatos (UTF8 em ISO8859...) >> $ cat oie.txt | recode html.utf8
-apps="$apps python-pip"                                             #gerenciador de pacotes python       
+apps="$apps python3-pip"                                            #gerenciador de pacotes python       
 apps="$apps nodejs"                                                 #framework frontend
 apps="$apps npm"                                                    #gerenciador de pacotes do node
 apps="$apps php"                                                    #php
 apps="$apps docker.io"                                              #aplicativo de container
 apps="$apps docker-compose"                                         #desenvolvimento de rotinas usando docker
 apps="$apps postgresql"                                             #postgresql
-apps="$apps mariadb-server-10.3"                                    #mysql
+apps="$apps mariadb-server-10.5"                                    #mysql
 apps="$apps umbrello"                                               #diagramcao uml estilo Astha
 # instalados via docker
 #apps="$apps tomcat9 tomcat9-admin tomcat9-docs tomcat9-examples tomcat9-user" #tomcat
@@ -209,14 +209,14 @@ apps="$apps nautilus-sendto"                                        #envia como 
 #apps="$apps grub-customizer"                                       #ferramentas para grub (não está no repo padrão)
 
 # ---- mobile
-apps="$apps android-tools-adb"                                      #ferramentas para android
-apps="$apps android-tools-fastboot"                                 #ferramentas para android
+apps="$apps adb"                                                   #ferramentas para android
+apps="$apps fastboot"                                              #ferramentas para android
 
 # ---- hardware
 apps="$apps inxi"                                                   #informações sobre o hardware
 apps="$apps neofetch"                                               #informações sobre o hardware/software
 apps="$apps lshw"                                                   #mostra informações do hardware (Ex.: para ver video digite # lshw -C video)
-apps="$apps glances"                                                #mostra informações de processos
+#apps="$apps glances"                                               #mostra informações de processos - obsoleto
 
 # ---- virtualização
 apps="$apps virtualbox-6.1"                                         #maquina virtual
