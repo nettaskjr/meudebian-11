@@ -367,9 +367,8 @@ fi
 if [ $executa -eq 1 ] 
 then
     vs="1.7.3"
-    prg="imager_${vs}_amd64.deb"
     end="https://downloads.raspberrypi.org/imager"
-    arq="imager_amd64.deb"
+    arq="imager_${vs}_amd64.deb"
     # ----
     wget -c -P "/tmp" "$end/$arq"
     exec="dpkg -i /tmp/$arq"
