@@ -80,7 +80,7 @@ if [ $executa -eq 1 ]
 then
     doSeparador "Adicionando repositorios..."
     # ---- apps basicos para os repos
-    apt install curl
+    apt install curl ca-certificates gnupg lsb-release
 
     # ---- adicionando contrib e non-free
     sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
@@ -101,6 +101,11 @@ then
     # ---- insync
     echo "deb http://apt.insync.io/debian $(lsb_release -cs) non-free contrib" > /etc/apt/sources.list.d/insync.list
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
+    
+    # ---- docker
+    apt remove docker docker-engine docker.io containerd runc
+    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 fi
 
 #-----------------------------------APLICATIVOS--------------------------------#
@@ -154,7 +159,7 @@ apps="$apps python3-pip"                                            #gerenciador
 apps="$apps nodejs"                                                 #framework frontend
 apps="$apps npm"                                                    #gerenciador de pacotes do node
 apps="$apps php"                                                    #php
-apps="$apps docker.io"                                              #aplicativo de container
+apps="$apps docker-ce docker-ce-cli containerd.io"                  #aplicativo de container
 apps="$apps docker-compose"                                         #desenvolvimento de rotinas usando docker
 apps="$apps postgresql"                                             #postgresql
 apps="$apps mariadb-server-10.5"                                    #mysql
