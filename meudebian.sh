@@ -135,7 +135,8 @@ apps="$apps rfkill"                                                 #verificar s
 apps="$apps progress"                                               #apresenta progresso nos comandos shell ex.: cp e mvP
 
 # ---- drivers
-#apps="$apps firmware-atheros"                                      #driver da placa de wifi atheros (DELL)
+#apps="$apps firmware-atheros"                                      #driver da placa de wifi atheros (DELL Latitude/Vostro)
+#apps="$apps firmware-iwlwifi"                                      #driver da placa de wifi/bluetooth (Samsung Book)
 
 # ---- redes                            
 apps="$apps net-tools"                                              #(ifconfig entre outros)
@@ -192,6 +193,7 @@ apps="$apps chromium"                                               #navegador o
 apps="$apps insync"                                                 #sincronizacao com a nuvem (Google drive e One Drive)
 apps="$apps insync-nautilus"                                        #plugin nautilus para insync
 apps="$apps netselect-apt"                                          #pesquisa qual o melhor mirror para o apt
+apps="$apps keepass2"                                               #gerenciado de senhas
 # apps="$apps playonlinux"                                          #front-end para wine
 
 # ---- videos e graficos
