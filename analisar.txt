@@ -6,3 +6,118 @@ adicionar pacots flatpak
 padronizar as funções
 
 integrar ao services
+
+#####################
+adicionar as atualizações de processadores
+
+Se você usa um processador da AMD®:
+
+apt install amd64-microcode
+
+  Se você usa um processador da Intel®:
+
+apt install intel-microcode
+
+######################
+avaliara instalação do TLP
+
+apt install tlp tlp-rdw
+
+aplicativo para melhorar a vida util da bateria de portateis
+
+######################
+instalar flatpak
+
+apt install flatpak
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+##########################
+
+inserir os repositorios não lfa-inverse
+
+deb http://deb.debian.org/debian/ bullseye main contrib non-free
+# deb-src http://deb.debian.org/debian/ bullseye main contrib non-free
+
+deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+# deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+# deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free
+
+## Debian Bullseye Backports
+# deb http://deb.debian.org/debian bullseye-backports main contrib non-free
+# deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free
+
+#########################
+
+novos plugins de audio e video 
+
+sudo apt install faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-g
+
+###########################
+
+Spotify (ver como fazer para ser direto sem pausa, tipo -y)
+
+flatpak install flathub com.spotify.Client
+
+para executar
+flatpak run com.spotify.Client
+
+############################
+
+emuladores
+
+flatpak install flathub org.DolphinEmu.dolphin-emu
+
+ Citra - Emulador de Nintendo 3DS:
+
+flatpak install flathub org.citra_emu.citra
+
+
+Flycast - Emulador de SEGA Dreamcast:
+
+flatpak install flathub org.flycast.Flycast
+
+
+    PCSX2 - Emulador de PlayStation 2:
+
+flatpak install flathub net.pcsx2.PCSX2
+
+
+    RPCS3 - Emulador de PlayStation 3 (experimental):
+
+flatpak install flathub net.rpcs3.RPCS3
+
+
+    Snes9x - Emulador de Super Nintendo:
+
+flatpak install flathub com.snes9x.Snes9x
+
+
+    Yuzu - Emulador de Nintendo Switch (experimental):
+
+flatpak install flathub org.yuzu_emu.yuzu
+
+
+############
+
+instlando netBeans
+
+##############
+
+uget - gerenciador de downloads igual getright
+
+apt install uget
+
+################
+
+temaviewer
+
+d /tmp && wget -c https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && apt install ./teamviewer*.deb && cd ..
+
+######
+
+apt install qbittorrent
+
+remover o torrent que está instalado e instalar esse
