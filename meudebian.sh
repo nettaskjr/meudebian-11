@@ -193,7 +193,7 @@ apps="$apps chromium"                                               #navegador o
 apps="$apps insync"                                                 #sincronizacao com a nuvem (Google drive e One Drive)
 apps="$apps insync-nautilus"                                        #plugin nautilus para insync
 apps="$apps netselect-apt"                                          #pesquisa qual o melhor mirror para o apt
-apps="$apps keepass2"                                               #gerenciado de senhas
+apps="$apps keepassxc"                                              #gerenciador de senhas
 # apps="$apps playonlinux"                                          #front-end para wine
 
 # ---- videos e graficos
