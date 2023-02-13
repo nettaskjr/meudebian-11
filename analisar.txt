@@ -121,3 +121,7 @@ d /tmp && wget -c https://download.teamviewer.com/download/linux/teamviewer_amd6
 apt install qbittorrent
 
 remover o torrent que está instalado e instalar esse
+
+###### 
+
+adicionar teclas de atalho 
