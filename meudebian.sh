@@ -247,7 +247,7 @@ apps="$apps deepin-icon-theme"                                      #icones do d
 
 # --- games
 #apps="$apps flightgear"                                            #flightgear simulator
-apps="$apps lutris"                                                 #player de games
+#apps="$apps lutris"                                                #player de games
 
 [ $executa -eq 1 ] && doSeparador "Instalando aplicativos..." && apt update && apt dist-upgrade -y && apt install -y $apps && apt -y autoremove
 
